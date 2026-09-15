@@ -7,7 +7,6 @@ import uuid
 import requests
 from concurrent.futures import ThreadPoolExecutor as tred
 
-# Color codes & formatting
 YELLOW = '\033[93m'
 GREEN = '\033[92m'
 CYAN = '\033[96m'
@@ -16,10 +15,8 @@ WHITE = '\033[97m'
 BOLD = '\033[1m'
 RESET = '\033[0m'
 
-# Your GitHub Raw Update URL
 UPDATE_URL = "https://raw.githubusercontent.com/nasirkamaluk27-hue/Old/main/raja"
 
-# Global variables for cloning
 oks = []
 cps = []
 loop = 0
